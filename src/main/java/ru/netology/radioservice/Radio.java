@@ -1,8 +1,8 @@
 package ru.netology.radioservice;
 
 public class Radio {
-    public int chanel;
-    public int volume;
+    private int chanel;
+    private int volume;
 
     public int getChanel() {
         return chanel;
@@ -33,30 +33,34 @@ public class Radio {
     }
 
     public void increaseVolume() {
+        int volume = getVolume();
         if (volume < 100) {
-            volume = volume + 1;
+            setVolume(volume + 1);
         }
     }
 
     public void decreaseVolume() {
+        int volume = getVolume();
         if (volume > 0) {
-            volume = volume - 1;
+            setVolume(volume - 1);
         }
     }
 
     public void nextChanel() {
+        int chanel = getChanel();
         if (chanel < 9) {
-            chanel = chanel + 1;
+            setChanel(chanel + 1);
         } else {
-            chanel = 0;
+            setChanel(0);
         }
     }
 
     public void prevChanel() {
+        int chanel = getChanel();
         if (chanel > 0) {
-            chanel = chanel - 1;
+            setChanel(chanel - 1);
         } else {
-            chanel = 9;
+            setChanel(9);
         }
     }
 }

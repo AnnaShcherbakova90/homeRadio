@@ -23,6 +23,16 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldSetChanel15() {
+        Radio radio = new Radio(20);
+        radio.setChanel(15);
+        int expected = 15;
+        int actual = radio.getChanel();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSetChanel() {
         radio.setChanel(5);
 

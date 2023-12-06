@@ -14,6 +14,7 @@ public class Radio {
 
     public Radio(int chanelAmount) {
         this.chanelAmount = chanelAmount;
+        this.maxChanel = chanelAmount - 1;
     }
     public int getChanel() {
         return chanel;
